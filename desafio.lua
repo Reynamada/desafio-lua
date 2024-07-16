@@ -2,6 +2,7 @@
 os.execute ("chcp 65001")
 
 
+
 --- PERSONAJE
 local characterName= "MARIO BROSS"
 local description= "Es el héroe principal del Reino Champiñón. Mario es muy positivo y siempre está alegre."
@@ -25,6 +26,32 @@ local speedAttribute= 8
 local inteligenceAttribute= 9
 local aerobaticAttribute= 10
 
+---Funcion marcos superior e inferior
+local function marcos ()
+    print("===========================================================================================================")
+    print("===========================================================================================================")
+end
+
+---Funcion muestra personaje 
+local function personaje()
+
+    print("| ".. characterName)
+    print("| ".. description)
+    print("| ".. description2)
+    print("| ".. description3)
+    print("| ".. description4)
+    print("| ".. description5)
+    print("| ".. description6)
+    print("|" )
+    print("| Emoji Favorito= ".. emoji)
+    print("| Item= ".. item)
+    print("| Musica de Fondo= ".. musicaDeFondo)
+    print("| Su mision= ".. mission)
+    print("| Su archienemigo= ".. archienemigo)
+    print("|" )
+    
+end
+
 
 
 ---Funcion que recibe un atributo y nos retorna una barra de progreso en string/texto
@@ -44,32 +71,24 @@ local function getProgressBar(attribute)
     return result
 end
 
+---Funcion que muestra los atributos del personaje
+local function attribute()
+    print("|" )
+    print("| Atributos" )
+    print("| " )
+    print("|    Ataque:       "..getProgressBar(attackAttribute) )
+    print("|    Defensa:      "..getProgressBar(defenseAttribute) )
+    print("|    Vida:         "..getProgressBar(lifeAttribute ))
+    print("|    Velocidad:    "..getProgressBar(speedAttribute) )
+    print("|    Inteligencia: "..getProgressBar(inteligenceAttribute) )
+    print("|    Acrobacias:   "..getProgressBar(aerobaticAttribute) )
+    print("| " )
+    
+end
 
---- Cartao
-print("===========================================")
 
-print("| ".. characterName)
-print("| ".. description)
-print("| ".. description2)
-print("| ".. description3)
-print("| ".. description4)
-print("| ".. description5)
-print("| ".. description6)
-print("|" )
-print("| Emoji Favorito= ".. emoji)
-print("| Item= ".. item)
-print("| Musica de Fondo= ".. musicaDeFondo)
-print("| Su mision= ".. mission)
-print("| Su archienemigo= ".. archienemigo)
-
-print("|" )
-print("| Atributos" )
-print("| " )
-print("|    Ataque:       "..getProgressBar(attackAttribute) )
-print("|    Defensa:      "..getProgressBar(defenseAttribute) )
-print("|    Vida:         "..getProgressBar(lifeAttribute ))
-print("|    Velocidad:    "..getProgressBar(speedAttribute) )
-print("|    Inteligencia: "..getProgressBar(inteligenceAttribute) )
-print("|    Acrobacias:   "..getProgressBar(aerobaticAttribute) )
-print("| " )
-print("===========================================")
+--- Imprime CCartão
+print(marcos())
+print(personaje())
+print(attribute())
+print(marcos())
